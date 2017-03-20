@@ -39,8 +39,8 @@ Provjeravalo bi se kojem učeniku pripada kartica i čuvalo bi se u bazi podatak
 * Pretraga roditelja za koje dijete želi da prikaže informacije ako ima više dijece
 
 ## Akteri
-* Administartor sistema
-Osoba koja bi jedina imala pravo da dodaje učenike, briše učenike i editoje već postojeće učenike. Kod nas je to pedagog u školi. Pored ovog ta osoba bi kreirala korisničke naloge za roditelje. Također bi imalo pravo da pretražuju učenike po više paramerara kao što su ime, prezime, razredu...
-* Učenici
-* Roditelji
+1. Administartor sistema
+Osoba koja bi jedina imala pravo da dodaje učenike, briše učenike i editoje već postojeće učenike.Kod nas je to pedagog u školi. Pored ovog ta osoba bi kreirala korisničke naloge za roditelje.Također bi imalo pravo da pretražuju učenike po više paramerara kao što su ime, prezime, razredu.
+2. Učenici
+3. Roditelji
 Imali bi pravo uvida za sve gore navede stavri za svoje dijete i mogli bi mjenjati lozinku za svoj korisnički nalog
