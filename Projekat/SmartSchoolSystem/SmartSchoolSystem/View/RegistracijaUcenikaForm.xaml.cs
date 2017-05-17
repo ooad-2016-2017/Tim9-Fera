@@ -20,7 +20,7 @@ namespace SmartSchoolSystem.View
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class ProfesorForm : Page
+    public sealed partial class RegistracijaUcenikaForm : Page
     {
         private int _numValue = 1;
         public int NumValue
@@ -33,14 +33,28 @@ namespace SmartSchoolSystem.View
             }
         }
 
-      
-        public ProfesorForm()
+        public RegistracijaUcenikaForm()
         {
             this.InitializeComponent();
             txtNum.Text = _numValue.ToString();
         }
 
-        private void TextBlock_DataContextChanged(FrameworkElement sender, DataContextChangedEventArgs args)
+        
+        private void cb_spolMusko_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            if (cb_spolMusko.IsChecked == true)
+                cb_spolZensko.IsChecked = false;
+        }
+
+        private void cb_spolZensko_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            if (cb_spolZensko.IsChecked == true)
+                cb_spolMusko.IsChecked = false;
+        }
+
+     
+
+        private void txtNum_DataContextChanged(FrameworkElement sender, DataContextChangedEventArgs args)
         {
             if(txtNum==null)
             {
@@ -52,28 +66,18 @@ namespace SmartSchoolSystem.View
 
         private void cmdup_Click(object sender, RoutedEventArgs e)
         {
-            if (NumValue == 5)
+            if (NumValue == 9)
                 NumValue = 1;
             else
-            NumValue++;
+                NumValue++;
         }
 
         private void cmdDown_Click(object sender, RoutedEventArgs e)
         {
-            if (NumValue == 1)
-                NumValue = 5;
-            else
-            NumValue--;
-        }
-
-        private void dodajOcjenuButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void b_roditeljski_Click(object sender, RoutedEventArgs e)
-        {
-
+                if (NumValue == 1)
+                    NumValue = 9;
+                else
+                    NumValue--;
         }
     }
 }

@@ -1,0 +1,74 @@
+﻿<Page
+    x:Class="SmartSchoolSystem.View.RegistracijaUcenikaForm"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SmartSchoolSystem.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Osnovni podaci" Grid.Column="0" Grid.Row="0" Margin="5,5,5,5" Grid.ColumnSpan="2" HorizontalAlignment="Center"></TextBlock>
+        <TextBlock Text="Ime ucenika:" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right"
+                   Margin="5,5,5,5"></TextBlock>
+        <TextBox x:Name="tb_imeUcenika" Grid.Column="1" Grid.Row="1"></TextBox>
+        <TextBlock Text="Prezime ucenika:" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Right"
+                   Margin="5,5,5,5"></TextBlock>
+        <TextBox x:Name="tb_prezimeUcenika" Grid.Column="1" Grid.Row="2"></TextBox>
+        <TextBlock Text="Datum rodenja:" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Right"
+                   Margin="5,5,5,5"></TextBlock>
+        <DatePicker  x:Name="dtp_datumRodenja" Grid.Column="1" Grid.Row="3"></DatePicker>
+        <TextBlock Text="Mjesto rodenja:" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Right"
+                   Margin="5,5,5,5"></TextBlock>
+        <ComboBox x:Name="cb_mjestoRodenja" Grid.Column="1" Grid.Row="4" MinWidth="150"></ComboBox>
+        <TextBlock Text="JMBG:" Grid.Column="0" Grid.Row="5" HorizontalAlignment="Right"
+                   Margin="5,5,5,5"></TextBlock>
+        <TextBox x:Name="tb_jmbg" Grid.Column="1" Grid.Row="5"></TextBox>
+        <TextBlock Text="Spol:" Grid.Column="0" Grid.Row="6" HorizontalAlignment="Right" Margin="5,5,5,5"></TextBlock>
+        <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="6">
+            <CheckBox x:Name="cb_spolMusko" Margin="10,5,0,5" Content="musko" Tapped="cb_spolMusko_Tapped"></CheckBox>
+            <CheckBox x:Name="cb_spolZensko" Margin="10,5,0,5" Content="zensko" Tapped="cb_spolZensko_Tapped"></CheckBox>
+        </StackPanel>
+        <TextBlock Text="Ime staratelja:" Grid.Column="0" Grid.Row="7" HorizontalAlignment="Right"
+                   Margin="5,5,5,5"></TextBlock>
+        <TextBox x:Name="tb_imeStaratelja" Grid.Column="1" Grid.Row="7"></TextBox>
+        <TextBlock Text="Prezime staratelja:" Grid.Column="0" Grid.Row="8" HorizontalAlignment="Right"
+                   Margin="5,5,5,5"></TextBlock>
+        <TextBox x:Name="tb_prezimeStaratelja" Grid.Column="1" Grid.Row="8"></TextBox>
+        <TextBlock Text="Zanimanje staratelja:" Grid.Column="0" Grid.Row="9" HorizontalAlignment="Right"
+                   Margin="5,5,5,5"></TextBlock>
+        <TextBox x:Name="tb_zanimanjeStaratelja" Grid.Column="1" Grid.Row="9"></TextBox>
+        <Image Source="ms-appx:///Assets/tesla.png" Grid.Column="2" Grid.Row="0" Grid.RowSpan="9" Margin="20"></Image>
+        <TextBlock Text="Razred:" Grid.Column="2" Grid.Row="9" HorizontalAlignment="Center"></TextBlock>
+        <StackPanel Orientation="Horizontal" Grid.Column="2" Grid.Row="10" HorizontalAlignment="Center">
+            <TextBlock x:Name="txtNum" x:FieldModifier="private" Margin="5,5,0,5" Width="30" Text="1" DataContextChanged="txtNum_DataContextChanged"/>
+            <Button x:Name="cmdup" x:FieldModifier="private" Margin="5,5,0,5" Content="+" Width="30" Click="cmdup_Click"/>
+            <Button x:Name="cmdDown" x:FieldModifier="private" Margin="5,5,0,5" Content="-" Width="30" Click="cmdDown_Click"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Column="2" Grid.Row="11" HorizontalAlignment="Center">
+            <Button x:Name="b_potvrdi" Content="Potvrdi" Margin="5"></Button>
+            <Button x:Name="b_odustani" Content="Odustani" Margin="5"></Button>
+        </StackPanel>
+        
+    </Grid>
+ 
+</Page>

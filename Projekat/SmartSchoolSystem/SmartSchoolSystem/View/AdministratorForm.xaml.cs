@@ -20,16 +20,11 @@ namespace SmartSchoolSystem.View
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class Login : Page
+    public sealed partial class AdministratorForm : Page
     {
-        public Login()
+        public AdministratorForm()
         {
             this.InitializeComponent();
-        }
-
-        private void logInButton_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
