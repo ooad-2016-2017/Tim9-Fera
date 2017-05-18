@@ -27,6 +27,28 @@ namespace SmartSchoolSystem.View
             this.InitializeComponent();
         }
 
-      
+        private void cb_spolMusko_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            if (cb_spolMusko.IsChecked == true)
+                cb_spolZensko.IsChecked = false;
+        }
+
+        private void cb_spolZensko_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            if (cb_spolZensko.IsChecked == true)
+                cb_spolMusko.IsChecked = false;
+        }
+
+        private void cb_statusRazDA_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            if (cb_statusRazDA.IsChecked == true)
+                cb_statusRazNE.IsChecked = false;
+        }
+
+        private void cb_statusRazNE_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            if (cb_statusRazNE.IsChecked == true)
+                cb_statusRazDA.IsChecked = false;
+        }
     }
 }

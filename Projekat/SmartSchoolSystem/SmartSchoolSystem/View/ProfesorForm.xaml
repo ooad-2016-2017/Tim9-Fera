@@ -20,18 +20,22 @@
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="30"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
         </Grid.RowDefinitions>
-        <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right">
+        <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center">
         <TextBlock Text="Razred:" VerticalAlignment="Center" Margin="5,0,5,0"></TextBlock>
         <ComboBox x:Name="cb_razred" MinWidth="100"></ComboBox>
         </StackPanel>
         <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="2">
             <TextBlock Text="Izaberite ucenika:" HorizontalAlignment="Center"></TextBlock>
-            <ComboBox HorizontalAlignment="Center" MinWidth="180" >
-                
-            </ComboBox>
+            <ComboBox HorizontalAlignment="Center" MinWidth="180" ></ComboBox>
             </StackPanel>
         <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="4">
+            <TextBlock Text="Izaberite predmet:" HorizontalAlignment="Center"></TextBlock>
+            <ComboBox HorizontalAlignment="Center"></ComboBox>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="5">
             <TextBlock Text="Unos ocjene" HorizontalAlignment="Center"></TextBlock>
             <TextBlock Text="Ocjena:" HorizontalAlignment="Center"></TextBlock>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">

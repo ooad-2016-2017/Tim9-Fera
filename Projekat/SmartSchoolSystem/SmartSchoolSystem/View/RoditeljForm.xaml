@@ -14,10 +14,14 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition Width="30"></ColumnDefinition>
             <ColumnDefinition Width="Auto"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <TextBlock Name="texblok" Text="Izaberite dijete:" Margin="5,5,5,0" Grid.Column="0" Grid.Row="0" VerticalAlignment="Center"></TextBlock>
-        <ComboBox RelativePanel.RightOf="texblok" MinWidth="100" Margin="5,10,0,0" Grid.Column="1" Grid.Row="0" VerticalAlignment="Center"></ComboBox>
+        <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.Row="0">
+            <TextBlock Name="texblok" Text="Izaberite dijete:" Margin="5,5,5,0" Grid.Column="0" Grid.Row="0" VerticalAlignment="Center"></TextBlock>
+            <ComboBox RelativePanel.RightOf="texblok" MinWidth="100" Margin="5,10,0,0" Grid.Column="1" Grid.Row="0" VerticalAlignment="Center"></ComboBox>
+        </StackPanel>
+        
         <RelativePanel Grid.Row="1">
             <StackPanel Orientation="Vertical">
                 <TextBlock Text="Predmet:" Margin="5,5,0,0" HorizontalAlignment="Center"></TextBlock>
@@ -31,7 +35,7 @@
                 </RichTextBlock>
             </StackPanel>
         </RelativePanel>
-        <RelativePanel Grid.Column="1" Grid.Row="1" Margin="5,20,0,0">
+        <RelativePanel Grid.Column="3" Grid.Row="1" Margin="5,20,0,0">
             <RichTextBlock>
                 <Paragraph>
                     Roditeljski sastanak-15.5.2017 g. u 20:00 sati
