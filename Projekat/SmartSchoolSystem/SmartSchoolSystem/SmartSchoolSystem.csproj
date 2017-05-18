@@ -102,6 +102,12 @@
     <Compile Include="View\AdministratorForm.xaml.cs">
       <DependentUpon>AdministratorForm.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\KorisnickiRacunProfForm.xaml.cs">
+      <DependentUpon>KorisnickiRacunProfForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\KorisnickiRacunRodForm.xaml.cs">
+      <DependentUpon>KorisnickiRacunRodForm.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
@@ -113,6 +119,9 @@
     </Compile>
     <Compile Include="View\RoditeljForm.xaml.cs">
       <DependentUpon>RoditeljForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\VrstaKorRacunaForm.xaml.cs">
+      <DependentUpon>VrstaKorRacunaForm.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -144,6 +153,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\KorisnickiRacunProfForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\KorisnickiRacunRodForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -157,6 +174,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\RoditeljForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\VrstaKorRacunaForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
