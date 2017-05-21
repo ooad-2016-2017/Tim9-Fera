@@ -25,7 +25,6 @@
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition Height="Auto"></RowDefinition>
         </Grid.RowDefinitions>
         <TextBlock Text="Osnovni podaci" Grid.Column="0" Grid.Row="0" Margin="5,5,5,5" Grid.ColumnSpan="2" HorizontalAlignment="Center"></TextBlock>
         <TextBlock Text="Ime:" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right" Margin="5,5,5,5"></TextBlock>
@@ -40,19 +39,14 @@
         <TextBox x:Name="tb_jmbgRod" Grid.Column="1" Grid.Row="5"></TextBox>
         <TextBlock Text="Drzavljanstvo:" Grid.Column="0" Grid.Row="6" HorizontalAlignment="Right" Margin="5,5,5,5"></TextBlock>
         <TextBox x:Name="tb_drzavljanstvoRod" Grid.Column="1" Grid.Row="6"></TextBox>
-        <TextBlock Text="Spol:" Grid.Column="0" Grid.Row="7" HorizontalAlignment="Right" Margin="5,5,5,5"></TextBlock>
-        <StackPanel x:Name="gb_spolRod" Orientation="Horizontal" Grid.Column="1" Grid.Row="7">
-            <CheckBox x:Name="cb_spolMusko" Margin="10,5,0,5" Content="musko" Tapped="cb_spolMusko_Tapped"></CheckBox>
-            <CheckBox x:Name="cb_spolZensko" Margin="10,5,0,5" Content="zensko" Tapped="cb_spolZensko_Tapped"></CheckBox>
-        </StackPanel>
-        <TextBlock Text="Naziv djeteta(ce):" Grid.Column="0" Grid.Row="8" HorizontalAlignment="Right" Margin="5,5,5,5"></TextBlock>
-        <ListBox x:Name="tb_djecaRod" Grid.Column="1" Grid.Row="8"></ListBox>
-        <TextBlock Text="Email:" Grid.Column="0" Grid.Row="9" HorizontalAlignment="Right" Margin="5,5,5,5"></TextBlock>
-        <TextBox x:Name="tb_emailRod" Grid.Column="1" Grid.Row="9"></TextBox>
-        <TextBlock Text="Kontakt telefon:" Grid.Column="0" Grid.Row="10" HorizontalAlignment="Right" Margin="5,5,5,5"></TextBlock>
-        <TextBox x:Name="tb_telRod" Grid.Column="1" Grid.Row="10"></TextBox>
+        <TextBlock Text="Naziv djeteta(ce):" Grid.Column="0" Grid.Row="7" HorizontalAlignment="Right" Margin="5,5,5,5"></TextBlock>
+        <ListBox x:Name="tb_djecaRod" Grid.Column="1" Grid.Row="7"></ListBox>
+        <TextBlock Text="Email:" Grid.Column="0" Grid.Row="8" HorizontalAlignment="Right" Margin="5,5,5,5"></TextBlock>
+        <TextBox x:Name="tb_emailRod" Grid.Column="1" Grid.Row="8"></TextBox>
+        <TextBlock Text="Kontakt telefon:" Grid.Column="0" Grid.Row="9" HorizontalAlignment="Right" Margin="5,5,5,5"></TextBlock>
+        <TextBox x:Name="tb_telRod" Grid.Column="1" Grid.Row="9"></TextBox>
         <Image x:Name="slika" Source="ms-appx:///Assets/tesla.png" Grid.Column="2" Grid.Row="0" Grid.RowSpan="8" Margin="20"/>
-        <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="13" HorizontalAlignment="Center">
+        <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="10" HorizontalAlignment="Center">
             <Button x:Name="b_potvrdi" Content="Potvrdi" Margin="5"></Button>
             <Button x:Name="b_odustani" Content="Odustani" Margin="5"></Button>
         </StackPanel>
