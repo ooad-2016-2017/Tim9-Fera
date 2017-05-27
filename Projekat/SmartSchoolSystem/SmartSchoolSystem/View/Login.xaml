@@ -26,5 +26,6 @@
         <Button x:Name="logInButton" Grid.Column="1" Grid.Row="4" Content="Login" Margin="5" Click="logInButton_Click" HorizontalAlignment="Center"></Button>
         <TextBox x:Name="username" Grid.Column="1" Grid.Row="2" MinWidth="100" Margin="5"></TextBox>
         <PasswordBox x:Name="login" Grid.Column="1" Grid.Row="3" MinWidth="100" Margin="5"></PasswordBox>
+        
     </Grid>
 </Page>

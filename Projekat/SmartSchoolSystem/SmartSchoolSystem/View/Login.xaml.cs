@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.WindowsAzure.MobileServices;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -29,6 +30,8 @@ namespace SmartSchoolSystem.View
 
         private void logInButton_Click(object sender, RoutedEventArgs e)
         {
+            IMobileServiceTable<Model.Ucenici> uceniciObjTabel = App.context.GetTable<Model.Ucenici>();
+            
 
         }
     }
