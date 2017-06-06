@@ -1,38 +1,107 @@
-﻿using Microsoft.WindowsAzure.MobileServices;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
+﻿using SQLite.Net;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
-
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace SmartSchoolSystem.View
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
     public sealed partial class Login : Page
     {
+        DataAccess.SmartSchoolDataSource s = new DataAccess.SmartSchoolDataSource();
         public Login()
         {
             this.InitializeComponent();
+
         }
+        /*private MainPage mainPage
+        {
+            get
+            {
+                var rootFrame = Window.Current.Content as Frame;
+                return rootFrame.Content as MainPage;
+            }
+        }*/
 
         private void logInButton_Click(object sender, RoutedEventArgs e)
         {
-            IMobileServiceTable<Model.Ucenici> uceniciObjTabel = App.context.GetTable<Model.Ucenici>();
-            
+            SQLiteConnection konekcija;
+            konekcija = s.konektuj();
+
+            /*MobileServiceCollection<Model.Roditelji,Model.Roditelji> items;
+            items = await uceniciObjTabel.Where(x => x.pass == login.Password && x.username == username.Text).ToCollectionAsync();
+            Model.Roditelji m = new Model.Roditelji();
+            m = await uceniciObjTabel
+                .Where(x =>  x.pass == login.Password && x.username==username.Text)
+                .Select(x => x.imeRod, x.prezimeRod, x.mjestoRodenjaRod, x.jmbgRod, x.drzavljanstvoRod, x.emailRod, x.telRod)
+                .ToCollectionAsync();*/
+
+
+
+            //select in entitity framework
+            /*IEnumerable<List<String>> roditelji = await uceniciObjTabel
+                .Where(x => x.pass == login.Password)
+                .Select(x => new List<String>{ x.jmbgRod, x.pass }).ToEnumerableAsync();
+
+            String pass = "sda";//paswords.FirstOrDefault();*/
+
+            /*IEnumerable<String> paswords = await uceniciObjTabel
+                .Where(x => x.pass == login.Password)
+                .Select(x => x.pass).ToEnumerableAsync();
+
+            String pass =paswords.FirstOrDefault();*/
+
+            /*IEnumerable<Model.Roditelji> r = await uceniciObjTabel
+                .Where(x => x.pass == login.Password && x.username == username.Text)
+                .Select(x => new Model.Roditelji
+                {
+                    imeRod = x.imeRod,
+                    prezimeRod = x.prezimeRod,
+                    mjestoRodenjaRod = x.mjestoRodenjaRod,
+                    jmbgRod = x.jmbgRod,
+                    drzavljanstvoRod = x.drzavljanstvoRod,
+                    emailRod = x.emailRod,
+                    telRod = x.telRod
+                }).ToEnumerableAsync();*/
+
+            /*IEnumerable<Model.Roditelji> r = await uceniciObjTabel
+                .Where(x => x.pass == login.Password && x.username == username.Text)
+                .Select(x => new Model.Roditelji
+                {
+                    imeRod = x.imeRod,
+                    prezimeRod = x.prezimeRod,
+                    mjestoRodenjaRod = x.mjestoRodenjaRod,
+                    jmbgRod = x.jmbgRod,
+                    drzavljanstvoRod = x.drzavljanstvoRod,
+                    emailRod = x.emailRod,
+                    telRod = x.telRod
+                }).ToEnumerableAsync();*/
+
+
+
+
+            /*if ()
+            {
+
+                this.Frame.Navigate(typeof(View.RoditeljForm));
+            }
+
+            else
+            {
+                var dialog = new MessageDialog("Neuspjesna prijava");
+                await dialog.ShowAsync();
+            }*/
+
+
 
         }
+
+
+       
+
     }
+
+        
 }
+            
+
+
+

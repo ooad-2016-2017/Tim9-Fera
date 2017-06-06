@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -7,10 +8,11 @@ using System.Threading.Tasks;
 
 namespace SmartSchoolSystem.Model
 {
-    public class Profesor:Korisnik
+    public class Roditelj:Korisnik
     {
-        public Predmet PredmetProf { get; set; } = new Predmet();
-        public DateTime DatumZapProf { get; set; }
-        public Boolean JeLiRazrednik { get; set; }
+        public List<Ucenik> djecaRod=new List<Ucenik>();
+            
+
     }
+
 }

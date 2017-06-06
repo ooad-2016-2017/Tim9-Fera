@@ -50,5 +50,10 @@ namespace SmartSchoolSystem.View
             if (cb_statusRazNE.IsChecked == true)
                 cb_statusRazDA.IsChecked = false;
         }
+
+        private void b_potvrdi_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

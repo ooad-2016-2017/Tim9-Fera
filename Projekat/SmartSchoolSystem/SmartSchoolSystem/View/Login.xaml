@@ -23,9 +23,11 @@
         </Grid.ColumnDefinitions>
         <TextBlock Text="Username" Grid.Column="0" Grid.Row="2" MinWidth="100" Margin="5"></TextBlock>
         <TextBlock Text="Password" Grid.Column="0" Grid.Row="3" MinWidth="100" Margin="5"></TextBlock>
-        <Button x:Name="logInButton" Grid.Column="1" Grid.Row="4" Content="Login" Margin="5" Click="logInButton_Click" HorizontalAlignment="Center"></Button>
-        <TextBox x:Name="username" Grid.Column="1" Grid.Row="2" MinWidth="100" Margin="5"></TextBox>
+        <Button x:Name="logInButton" Grid.Column="1" Grid.Row="4" Content="Login" Margin="5" HorizontalAlignment="Center" Click="logInButton_Click"/>
+        <TextBox x:Name="username" Grid.Column="1" Grid.Row="2" MinWidth="100" Margin="5.6,5,4.8,0" Height="32" VerticalAlignment="Top"></TextBox>
         <PasswordBox x:Name="login" Grid.Column="1" Grid.Row="3" MinWidth="100" Margin="5"></PasswordBox>
+        <TextBox x:Name="patch" Grid.Column="3" Grid.Row="2"></TextBox>
+        
         
     </Grid>
 </Page>

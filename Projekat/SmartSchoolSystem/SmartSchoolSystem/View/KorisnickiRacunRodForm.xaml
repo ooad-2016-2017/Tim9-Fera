@@ -45,7 +45,6 @@
         <TextBox x:Name="tb_emailRod" Grid.Column="1" Grid.Row="8"></TextBox>
         <TextBlock Text="Kontakt telefon:" Grid.Column="0" Grid.Row="9" HorizontalAlignment="Right" Margin="5,5,5,5"></TextBlock>
         <TextBox x:Name="tb_telRod" Grid.Column="1" Grid.Row="9"></TextBox>
-        <Image x:Name="slika" Source="ms-appx:///Assets/tesla.png" Grid.Column="2" Grid.Row="0" Grid.RowSpan="8" Margin="20"/>
         <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="10" HorizontalAlignment="Center">
             <Button x:Name="b_potvrdi" Content="Potvrdi" Margin="5" Click="b_potvrdi_Click"></Button>
             <Button x:Name="b_odustani" Content="Odustani" Margin="5"></Button>
