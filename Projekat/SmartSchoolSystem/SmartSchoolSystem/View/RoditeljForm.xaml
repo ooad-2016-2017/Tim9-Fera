@@ -42,5 +42,6 @@
                 </Paragraph>
             </RichTextBlock>
         </RelativePanel>
+        <Button x:Name="b_logout" Content="Odjava" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" Click="b_logout_Click"></Button>  
     </Grid>
 </Page>

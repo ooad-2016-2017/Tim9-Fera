@@ -11,9 +11,9 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"></ColumnDefinition>
             <ColumnDefinition Width="Auto"></ColumnDefinition>
-            <ColumnDefinition Width="Auto"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
@@ -57,15 +57,15 @@
         <TextBlock Text="Zanimanje staratelja:" Grid.Column="0" Grid.Row="9" HorizontalAlignment="Right"
                    Margin="5,5,5,5"></TextBlock>
         <TextBox x:Name="tb_zanimanjeStaratelja" Grid.Column="1" Grid.Row="9" PlaceholderText="Zanimanje rodtelja"></TextBox>
-        <TextBlock Text="Razred:" Grid.Column="2" Grid.Row="9" HorizontalAlignment="Center"></TextBlock>
-        <StackPanel Orientation="Horizontal" Grid.Column="2" Grid.Row="10" HorizontalAlignment="Center">
+        <TextBlock Text="Razred:" Grid.Column="1" Grid.Row="10" HorizontalAlignment="Center"></TextBlock>
+        <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="11" HorizontalAlignment="Center">
             <TextBlock x:Name="txtNum" x:FieldModifier="private" Margin="5,5,0,5" Width="30" Text="1" DataContextChanged="txtNum_DataContextChanged"/>
             <Button x:Name="cmdup" x:FieldModifier="private" Margin="5,5,0,5" Content="+" Width="30" Click="cmdup_Click"/>
             <Button x:Name="cmdDown" x:FieldModifier="private" Margin="5,5,0,5" Content="-" Width="30" Click="cmdDown_Click"/>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Grid.Column="2" Grid.Row="11" HorizontalAlignment="Center">
-            <Button x:Name="b_potvrdi" Content="Potvrdi" Margin="5" Tapped="b_potvrdi_Tapped"></Button>
-            <Button x:Name="b_odustani" Content="Odustani" Margin="5"></Button>
+        <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="12" HorizontalAlignment="Center">
+            <Button x:Name="b_potvrdi" Content="Registruj" Margin="5" Click="b_potvrdi_Click"/>
+            <Button x:Name="b_odustani" Content="Nazad" Margin="5" Click="b_odustani_Click"></Button>
         </StackPanel>
         
     </Grid>

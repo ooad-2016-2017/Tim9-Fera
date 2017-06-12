@@ -26,5 +26,10 @@ namespace SmartSchoolSystem.View
         {
             this.InitializeComponent();
         }
+
+        private void b_logout_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(View.Login));
+        }
     }
 }

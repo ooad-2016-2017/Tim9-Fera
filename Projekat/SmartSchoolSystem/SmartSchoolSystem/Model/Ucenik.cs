@@ -15,10 +15,15 @@ namespace SmartSchoolSystem.Model
         public String Jmbg { get; set; }
         public String Spol { get; set; }
         public String ImeRod { get; set; }
-        public String prezimeRod { get; set; }
-        public String zanimanjeRod { get; set; }
+        public String PrezimeRod { get; set; }
+        public String ZanimanjeRod { get; set; }
+        public String Razred { get; set; }
         public List<Predmet> predmeti { get; set; } = new List<Predmet>();
-        
-       
+
+        public override string ToString()
+        {
+            return Razred.ToString();
+        }
+
     }
 }

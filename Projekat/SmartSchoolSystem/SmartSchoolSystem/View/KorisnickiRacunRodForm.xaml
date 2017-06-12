@@ -8,6 +8,7 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"></ColumnDefinition>
             <ColumnDefinition Width="Auto"></ColumnDefinition>
@@ -27,8 +28,8 @@
             <RowDefinition Height="Auto"></RowDefinition>
         </Grid.RowDefinitions>
         <TextBlock Text="Osnovni podaci" Grid.Column="0" Grid.Row="0" Margin="5,5,5,5" Grid.ColumnSpan="2" HorizontalAlignment="Center"></TextBlock>
-        <TextBlock Text="Ime:" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right" Margin="5,5,5,5"></TextBlock>
-        <TextBox x:Name="tb_imeRod" Grid.Column="1" Grid.Row="1"></TextBox>
+        <TextBlock Text="Ime:" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right" Margin="5,5,5,5" ></TextBlock>
+        <TextBox x:Name="tb_imeRod" Grid.Column="1" Grid.Row="1" TextChanged="tb_imeRod_TextChanged"></TextBox>
         <TextBlock Text="Prezime:" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Right" Margin="5,5,5,5"></TextBlock>
         <TextBox x:Name="tb_prezimeRod" Grid.Column="1" Grid.Row="2"></TextBox>
         <TextBlock Text="Datum rodenja:" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Right" Margin="5,5,5,5"></TextBlock>
@@ -40,14 +41,14 @@
         <TextBlock Text="Drzavljanstvo:" Grid.Column="0" Grid.Row="6" HorizontalAlignment="Right" Margin="5,5,5,5"></TextBlock>
         <TextBox x:Name="tb_drzavljanstvoRod" Grid.Column="1" Grid.Row="6"></TextBox>
         <TextBlock Text="Naziv djeteta(ce):" Grid.Column="0" Grid.Row="7" HorizontalAlignment="Right" Margin="5,5,5,5"></TextBlock>
-        <ListBox x:Name="tb_djecaRod" Grid.Column="1" Grid.Row="7"></ListBox>
+        <ListBox x:Name="lb_djecaRod" Grid.Column="1" Grid.Row="7" Loaded="lb_djecaRod_Loaded" ></ListBox>
         <TextBlock Text="Email:" Grid.Column="0" Grid.Row="8" HorizontalAlignment="Right" Margin="5,5,5,5"></TextBlock>
         <TextBox x:Name="tb_emailRod" Grid.Column="1" Grid.Row="8"></TextBox>
         <TextBlock Text="Kontakt telefon:" Grid.Column="0" Grid.Row="9" HorizontalAlignment="Right" Margin="5,5,5,5"></TextBlock>
         <TextBox x:Name="tb_telRod" Grid.Column="1" Grid.Row="9"></TextBox>
         <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="10" HorizontalAlignment="Center">
-            <Button x:Name="b_potvrdi" Content="Potvrdi" Margin="5" Click="b_potvrdi_Click"></Button>
-            <Button x:Name="b_odustani" Content="Odustani" Margin="5"></Button>
+            <Button x:Name="b_potvrdi" Content="Dodaj" Margin="5" Click="b_potvrdi_Click"></Button>
+            <Button x:Name="b_odustani" Content="Nazad" Margin="5" Click="b_odustani_Click"></Button>
         </StackPanel>
         
     </Grid>

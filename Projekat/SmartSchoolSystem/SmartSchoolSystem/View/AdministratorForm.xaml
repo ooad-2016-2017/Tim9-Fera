@@ -8,6 +8,33 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+        <StackPanel>
+            <TextBlock Text="Izaberite koji nalog zelite kreirat"
+                     Margin="20"
+                     Width="Auto"
+                     HorizontalAlignment="Left"
+                     FontSize="18"></TextBlock>
+            <StackPanel Orientation="Vertical" Margin="20,0,20,50">
+                <StackPanel Orientation="Horizontal" Margin="10">
+                    <Button x:Name="b_Prof" Content="Profesor" Grid.Column="1" Grid.Row="1" Click="b_Prof_Click"></Button>
+                    <Button x:Name="b_Rod" Content="Roditelj" Grid.Column="2" Grid.Row="1" Click="b_Rod_Click"></Button>
+                    <Button x:Name="b_Ucenik" Content="Ucenik" Grid.Column="3" Grid.Row="1" Click="b_Ucenik_Click"></Button>
+                </StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Naziv predmeta:" VerticalAlignment="Center" Margin="5,0,0,0"></TextBlock>
+                        <TextBox x:Name="tb_nazivPredmeta" Margin="5,0,0,0" Width="150"></TextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" >
+                        <Button x:Name="b_noviPredmet" Content="Novi predmet" Margin="10" Click="b_noviPredmet_Click"/>
+                    </StackPanel>
+                </StackPanel>
+                
+                <StackPanel Orientation="Horizontal" Margin="10">
+                    <Button x:Name="b_odjava" Content="Odjavi" Click="b_odjava_Click"></Button>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
     </Grid>
+    
 </Page>

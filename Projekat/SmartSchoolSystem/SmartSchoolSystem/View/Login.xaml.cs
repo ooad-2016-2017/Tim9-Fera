@@ -1,6 +1,8 @@
 ﻿using SQLite.Net;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using System.Threading.Tasks;
 
 namespace SmartSchoolSystem.View
 {
@@ -10,22 +12,32 @@ namespace SmartSchoolSystem.View
         public Login()
         {
             this.InitializeComponent();
+            s.konektuj();
 
         }
-        /*private MainPage mainPage
+
+
+        private  void logInButton_Click(object sender, RoutedEventArgs e)
         {
-            get
+
+            Model.Korisnik user = s.findUser(username.Text, login.Password);
+            if (user != null && user.VrstaKorisnika == "Administrator")
             {
-                var rootFrame = Window.Current.Content as Frame;
-                return rootFrame.Content as MainPage;
+                this.Frame.Navigate(typeof(View.AdministratorForm));
             }
-        }*/
+            else if (user != null && user.VrstaKorisnika == "Roditelj")
+            {
+                this.Frame.Navigate(typeof(View.RoditeljForm));
+            }
+            else if (user != null && user.VrstaKorisnika == "Profesor")
+            {
+                this.Frame.Navigate(typeof(View.ProfesorForm));
+            }
 
-        private void logInButton_Click(object sender, RoutedEventArgs e)
-        {
-            SQLiteConnection konekcija;
-            konekcija = s.konektuj();
-
+            MessageDialog msg= new MessageDialog("Ne postoji korisnik pod tim username/paswordom!");
+            msg.ShowAsync();
+               
+            
             /*MobileServiceCollection<Model.Roditelji,Model.Roditelji> items;
             items = await uceniciObjTabel.Where(x => x.pass == login.Password && x.username == username.Text).ToCollectionAsync();
             Model.Roditelji m = new Model.Roditelji();
@@ -95,7 +107,7 @@ namespace SmartSchoolSystem.View
         }
 
 
-       
+
 
     }
 

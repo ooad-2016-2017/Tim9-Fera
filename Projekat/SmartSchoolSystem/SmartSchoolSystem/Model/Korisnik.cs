@@ -19,6 +19,22 @@ namespace SmartSchoolSystem.Model
         public String KontaktTel { get; set; }
         public String Username { get; set; }
         public String PassHash { get; set; }
+        public String VrstaKorisnika { get; set; }
+
+        public Korisnik() { }
+        public Korisnik(String ime,String prezime,String mjestoRodenja,String jmbg,String drzavljanstvo,String email,String kontaktTel,String username,String pass,String vrstaKorisnika)
+        {
+            this.Ime = ime;
+            this.Prezime = prezime;
+            this.MjestoRodenja = mjestoRodenja;
+            this.Jmbg = jmbg;
+            this.Drzavljanstvo = drzavljanstvo;
+            this.Email = email;
+            this.KontaktTel = kontaktTel;
+            this.Username = username;
+            this.PassHash = pass;
+            this.VrstaKorisnika = vrstaKorisnika;
+        }
 
     }
 }

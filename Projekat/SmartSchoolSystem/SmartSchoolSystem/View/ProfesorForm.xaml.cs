@@ -23,6 +23,8 @@ namespace SmartSchoolSystem.View
     public sealed partial class ProfesorForm : Page
     {
         private int _numValue = 1;
+      
+
         public int NumValue
         {
             get { return _numValue; }
@@ -38,6 +40,7 @@ namespace SmartSchoolSystem.View
         {
             this.InitializeComponent();
             txtNum.Text = _numValue.ToString();
+            cb_razred.Items.Add(new Model.Ucenik());
         }
 
         private void TextBlock_DataContextChanged(FrameworkElement sender, DataContextChangedEventArgs args)
@@ -75,5 +78,8 @@ namespace SmartSchoolSystem.View
         {
 
         }
+
+       
     }
+
 }

@@ -97,6 +97,7 @@
     </Compile>
     <Compile Include="DataAccess\SmartSchoolDataSource.cs" />
     <Compile Include="DataValidation\FormDataValidator.cs" />
+    <Compile Include="DataValidation\PaswordHashing.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
